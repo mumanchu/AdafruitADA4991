@@ -19,6 +19,9 @@ This code was developed and tested on an STM32. It may need modifications for ot
 Read the commented source code for more details.
 
 ```cpp
+class AdafruitADA4991
+{
+public:
 	// Convert 3 separate 8-bit RGB values to a single 24-bit RGB value
 	#define RGB(r, g, b) (ulong)((ulong)(byte)r << 16) + ((ulong)(byte)g << 8) + (byte)b)
 
@@ -35,6 +38,7 @@ Read the commented source code for more details.
 	//bool disableEncoderInterrupt(byte encoder = 0);
 	bool setEncoderPosition(long pos, byte encoder = 0);
 	//<<<
+};
 ```
 ## Useful Links
 
