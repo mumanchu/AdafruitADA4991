@@ -35,7 +35,7 @@ public:
 	long getEncoderPosition(byte encoder = 0);
 	long getEncoderDelta(byte encoder = 0);
 	bool enableEncoderInterrupt(byte encoder = 0);
-	//bool disableEncoderInterrupt(byte encoder = 0);
+	bool disableEncoderInterrupt(byte encoder = 0);
 	bool setEncoderPosition(long pos, byte encoder = 0);
 	//<<<
 };
