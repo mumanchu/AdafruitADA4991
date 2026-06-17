@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////
 // Example sketch for Adafruit ADA4991 I2C Rotary Encoder QT Module
-// 
+// https://github.com/mumanchu/AdafruitADA4991
 
 #include <Wire.h>
 
@@ -12,8 +12,9 @@ AdafruitADA4991 ada4991;
 
 void setup() 
 {
-	Serial.setTx(PC_10);
-	Serial.setRx(PC_11);
+	//if you want to use different pins
+	//Serial.setTx(PC_10);
+	//Serial.setRx(PC_11);
 
 	Serial.begin(115200);
 	delay(3000);
