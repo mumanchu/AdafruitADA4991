@@ -2,7 +2,9 @@
 
 The ADA4991 is an I2C module with a rotary encoder and an RGB LED. It has an onboard microprocessor to do most of the work. This removes all the complexity of interrupt handling for the encoder, and nanosecond timing for the RGB LED.
 
-This board is part of Adafruit's "seesaw" framework which comprises a set of boards with I2C interfaces and a comprehensive seesaw library for programming them.
+<img src="https://github.com/mumanchu/mumanchu/blob/main/assets/ada4991/ada4991.jpg" alt="Picture of ADA4991 board" width="300">
+
+This board is part of Adafruit's "seesaw" framework which comprises a set of boards with I2C interfaces and a comprehensive seesaw library for programming them. It has Stemma QT connectors (for chaining I2C devices), but you don't need to use those because it also has a 2.54mm pin header. It will run on 3.3V or 5V, with an onboard 3.3V regulator so 5V can be used.
 
 I wanted to use this board _without_ the seesaw library, so this small-footprint AdafruitADA4991 library `Adafruit4991.h` was developed. It handles the rotary encoder and RGB LED in the same class.
 
@@ -13,6 +15,9 @@ Poll the encoder with `hasInterrupt()` from `loop()` to check for events, then r
 This code was developed and tested on an STM32. It may need modifications for other MCUs, further tests will be done later. 
 
 ## Class Reference
+
+Read the commented source code for more details.
+
 ```cpp
 	// Convert 3 separate 8-bit RGB values to a single 24-bit RGB value
 	#define RGB(r, g, b) (ulong)((ulong)(byte)r << 16) + ((ulong)(byte)g << 8) + (byte)b)
