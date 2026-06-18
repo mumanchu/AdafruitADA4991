@@ -90,7 +90,7 @@ public:
 	long getEncoderPosition(byte encoder = 0);
 	long getEncoderDelta(byte encoder = 0);
 	bool enableEncoderInterrupt(byte encoder = 0);
-	//bool disableEncoderInterrupt(byte encoder = 0);
+	bool disableEncoderInterrupt(byte encoder = 0);
 	bool setEncoderPosition(long pos, byte encoder = 0);
 	//<<<
 
@@ -213,13 +213,11 @@ bool AdafruitADA4991::enableEncoderInterrupt(byte encoder)
 	return write(0x11, 0x10 + encoder, &b, 1);
 }
 
-/*this is not needed
 bool AdafruitADA4991::disableEncoderInterrupt(byte encoder)
 {
 	byte b = 0x01;
 	return write(0x11, 0x20 + encoder, &b, 1);
 }
-*/
 
 bool AdafruitADA4991::setEncoderPosition(long pos, byte encoder)
 {
