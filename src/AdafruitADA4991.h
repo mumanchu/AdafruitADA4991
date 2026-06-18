@@ -66,7 +66,7 @@ Encode Push Button		Seesaw Pin 24
 QUAD ROTARY ENCODER
 The quad rotary encoder version is not fully supported.
 The 'encoder' parameter (0..3) is only for the quad rotary encoder 
-https://www.adafruit.com/product/5752
+https://learn.adafruit.com/adafruit-i2c-quad-rotary-encoder-breakout
 */
 
 
