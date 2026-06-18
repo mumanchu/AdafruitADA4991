@@ -51,6 +51,10 @@ https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder
 **Adafruit seesaw Reference** \
 https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/reading-and-writing-data
 
+**Adafruit Quad Rotary Encoder** \
+This is not fully supported yet. \
+https://learn.adafruit.com/adafruit-i2c-quad-rotary-encoder-breakout
+
 <br/>
 
 ## Revision History
