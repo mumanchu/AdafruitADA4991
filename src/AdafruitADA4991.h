@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////////////////
 // Adafruit ADA4991 I2C Rotary Encoder QT Module
 // with 'neopixel' RGB LED
-// Copyright (C) mumanchu, muman.ch & Adafruit, 2026.06.16
+// Copyright (C) mumanchu, muman.ch & Adafruit, 2026.06.18
 // All Rights Reversed Inversely
 /*
 Instead of using the full Adafruit Seesaw package, this code 
@@ -64,7 +64,7 @@ RGB LED					Seesaw Pin 6
 Encode Push Button		Seesaw Pin 24
 
 QUAD ROTARY ENCODER
-The quad rotary encoder version is not fully supported.
+This is not fully supported yet.
 The 'encoder' parameter (0..3) is only for the quad rotary encoder 
 https://learn.adafruit.com/adafruit-i2c-quad-rotary-encoder-breakout
 */
@@ -258,26 +258,21 @@ bool AdafruitADA4991::adaPinMode(byte pin, byte mode)
 	// we only need this one, for now
 	case INPUT_PULLUP:
 		// 0x03=DIRCLR, 0x0B=PULLENSET, 0x05=SET 
-		if (write(0x01, 0x03, p, 4) &&
+		return write(0x01, 0x03, p, 4) &&
 			write(0x01, 0x0B, p, 4) &&
-			write(0x01, 0x05, p, 4))
-			return true;
-		break;
+			write(0x01, 0x05, p, 4);
 	/*these are not used for the ADA4991
 	case OUTPUT:
 		// 0x02=DIRSET
-		write(0x01, 0x02, p, 4);
-		break;
+		return write(0x01, 0x02, p, 4);
 	case INPUT:
 		// 0x03=DIRCLR
-		write(0x01, 0x03, p, 4);
-		break;
+		return write(0x01, 0x03, p, 4);
 	case INPUT_PULLDOWN:
 		// 0x03=DIRCLR, 0x0B=PULLENSET, 0x06=CLR 
-		write(0x01, 0x03, p, 4);
-		write(0x01, 0x0B, p, 4);
-		write(0x01, 0x06, p, 4);
-		break;
+		return write(0x01, 0x03, p, 4) &&
+			write(0x01, 0x0B, p, 4) &&
+			write(0x01, 0x06, p, 4);
 	*/
 	default:
 		LOGERROR("mode not supported");
