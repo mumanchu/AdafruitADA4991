@@ -12,7 +12,10 @@ To use it, see the example sketch.
 
 Poll the encoder with `hasInterrupt()` from `loop()` to check for events, then read the position and button states. It does not use actual interrupts because you cannot call the I2C methods from an interrupt handler. The interrupt state is not cleared until the position and button states are read. The red LED on the borad turns on when the INT pin is active (low).
 
-This code was developed and tested on an STM32. It may need modifications for other MCUs, further tests will be done later. 
+This code was developed and tested on an STM32. It may need modifications for other MCUs, further tests will be done later.
+
+> [!NOTE]
+> The Quad Rotary Encoder version is not fully supported yet, but the code will be updated when I get one...
 
 ## Class Reference
 
