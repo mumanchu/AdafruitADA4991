@@ -1,4 +1,4 @@
-# AdafruitADA4991
+# Adafruit ADA4991 I2C Rotary Encoder
 
 The ADA4991 is an I2C module with a rotary encoder and an RGB LED. It has an onboard microprocessor to do most of the work. This removes all the complexity of interrupt handling for the encoder, and nanosecond timing for the RGB LED.
 
